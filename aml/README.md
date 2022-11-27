@@ -1,8 +1,12 @@
 To deploy model registered in Azure ML using managed online endpoints:
 
-* Build the Docker image in the ```env``` folder with the conda dependencies, and push it to you Azure Container Registry
-* Then run the following code in the Azure ML compute instance
+#### Build the Docker image in the ```env``` folder with the conda dependencies, and push it to you Azure Container Registry. Sample code here:
+```
+docker build -t amlhuduaacr.azurecr.io/repo/env:v1 .
+docker push amlhuduaacr.azurecr.io/repo/env:v1
+```
 
+#### Then run the following code in the Azure ML compute instance
 ```
 
 az login
