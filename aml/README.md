@@ -8,12 +8,12 @@ docker push amlhuduaacr.azurecr.io/repo/env:v1
 
 #### Then run the following code in the Azure ML compute instance
 ```
-
 az login
 az extension add -n ml
 az account set -s "<subscription name>"
 az configure --defaults workspace=amlworkshopacename group=rgname
 az ml online-endpoint create  -f aml/endpoint.yml
 az ml online-deployment create  -f aml/deployment.yml
-
 ```
+
+Reference is found here: https://learn.microsoft.com/en-us/azure/machine-learning/how-to-deploy-managed-online-endpoints?tabs=azure-cli
